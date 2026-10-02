@@ -1,0 +1,187 @@
+
+body {
+
+  background-color: #ffffff; /*color del fondo de la pagina */
+  padding-top: 100px;
+ 
+}
+
+/* Encabezado Principal */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem; /* Espacio entre el logo y la lista */
+  padding: 1rem 3rem;
+  background-color: #ffffff;
+  border-bottom:1px solid #e5e5e5;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Estilo del Logo */
+.logo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #0c0b0b; 
+  font-size: 1.0rem;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+/* Lista de Navegación */
+.navegacion {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.2rem; /* Espaciado entre los enlaces */
+}
+
+/* Estilo Base de los Enlaces */
+.navegacion a {
+  color: #0b0b0b;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Estado Activo (Píldora gris resaltada) */
+.navegacion a {
+  color: #0c0a0a;
+  font-weight: 700;
+}
+
+/* Efecto al pasar el cursor (Hover) */
+.navegacion a:not(.active):hover {
+  color: #b3b3b3;
+}
+
+section{
+  padding: 50px 50px;
+  width: 100%;
+  scroll-margin-top: 50px;
+}
+
+.card{
+  background-color: #ffffff;
+  border:1px solid #e0e0e0;
+  border-radius:8px;
+  padding:20px;
+  margin-top:5px;
+  box-shadow: 0 2px 6px rgba(0,0,0, 0.04);
+  max-width: 1500px;
+}
+
+section h2{
+  font-size: 1.6rem;
+  color: #1f1f1f;
+  margin-bottom: 20px;
+  border-left: 4px solid #000000;
+  padding-left: 10px;
+}
+
+#perfil{
+  width: 100%;
+  background-color: #ffffff;
+  background-image: radial-gradient(
+    ellipse at 100% 50%,
+    #e8f0fe 0%,
+    #e8f0fe 45%,
+    transparent 70%
+  );
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  
+
+}
+
+.contenedorperfil{
+  max-width: 600px;
+  margin-left: 50px;
+  padding: 0 20px;
+}
+
+#foto-perfil{
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+html, body{
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.pie{
+  display: flex;
+  font-size: 15px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #ffffff;
+  border-bottom:1px solid #e5e5e5;
+
+}
+
+/* --- AJUSTES PARA PANTALLAS MÓVILES --- */
+@media (max-width: 768px) {
+
+  /* 1. Ajuste del menú de navegación */
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .navegacion {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  /* 2. Reducción de rellenos de secciones para no desperdiciar espacio */
+  section {
+    padding: 20px 15px;
+  }
+
+  /* 3. Ajuste de la sección de Perfil y Foto */
+  #perfil {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .contenedorperfil {
+    margin-left: 0; /* Quita el margen fijo de 50px */
+    padding: 0;
+  }
+
+  #foto-perfil {
+    width: 100%;
+    max-width: 200px; /* Evita que ocupe más de lo necesario */
+  }
+
+  /* 4. Ajuste del Pie de página */
+  .pie {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+}
